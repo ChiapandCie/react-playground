@@ -15,11 +15,19 @@ Cet input:
 - Quand la saisie est validée on s'assure de bien avoir notre objet todo (au moins en faisant un console.log dans les premiers temps) et que le champ soit vidé
 - Quand la saisie est annulée on vide le champ
 
+<<<<<<< HEAD
+
 #### Comment faire ?
 
-Nous allons passer par une variable d'état que l'on va nommer `newTodo` qui nous permettra de gérer les saisies, et qui contiendra les données à ajouter à la liste.
+# Nous allons passer par une variable d'état que l'on va nommer `newTodo` qui nous permettra de gérer les saisies, et qui contiendra les données à ajouter à la liste.
+
+La librairie permet de régler une problématique rencontrée quand on doit synchroniser notre état d'application et notre vue (l'interface) dans une application JS from scratch.
+
+> > > > > > > main
 
 un objet `newTodo` doit respecter le modèle suivant :
+
+<<<<<<< HEAD
 
 ```javascript
     let newTodo = {
@@ -29,6 +37,39 @@ un objet `newTodo` doit respecter le modèle suivant :
         isEditing: false
     }
 ```
+
+=======
+
+- Être à l'aise avec Javascript (ES6).
+- Utiliser VSCode.
+- Avoir un compte github
+- Savoir utiliser les fonctions de base de git
+
+optionnel :
+
+- installer l'extension Live Server (pour VSCode).
+
+## Comment utiliser ce repository
+
+Chaque exercice est sur une branche séparée.
+A partir de l'exercice 2, vous obtenez la correction des exercices précédents.
+
+> _Exemple: La correction de l'exercice 3 se situe sur la branche exo4_
+
+Vous allez commit vos changements à chaque fin d'exercice, ce qui fait qu'a la fin du module vous aurez les corrections au bon endroit.
+
+> _Exemple: Je produis le code pour l'exercice 4 dans la branche exo4. Une fois terminé, je commit mes changements puis je checkout sur la branche exo5. Ma solution à l'exercice 4 sera sur la branche exo4. Vous pourrez comparer les deux grâce à_ `git diff exo4..exo5 -- main.js`
+
+Ce module a une approche orientée sur documentation. Et ce afin de vous habituer à des situations professionnelles où vous serez amenés à vous appuyer sur la documentation de la technologie sur laquelle vous êtes en train de travailler.
+
+---
+
+## Pour commencer
+
+- Faites un fork de ce repo pour en avoir une "copie" sur votre github personnel
+
+- Placez sur la branche exo1 avec la commande `git checkout exo1`
+  > > > > > > > main
 
 ### Partie 2
 
