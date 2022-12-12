@@ -1,30 +1,39 @@
 import React from "react";
-import {useState} from 'react';
+import TodoItem from "./TodoItem";
 
-export default function TodoList({listItems,handleChangeChecked}) {
-  
-  const toDoList = listItems.map((item) => (
-    <tr>
-      <td>{item.title}</td>
-      <td><input onClick={handleChangeChecked} 
-                 type="checkbox" 
-                 value={item.id} 
-                 name={item.title} 
-                 checked={item.isCompleted ? "true":""} /></td>
-      <td><button>Edit</button></td>
-      <td><button>Delet</button></td>
-    </tr>
-  ))
-
-  return(
+export default function TodoList({
+  items,
+  handleChangeIsCompleted,
+  handleDeleteItem,
+  handleChangeEdit,
+  handleChangeInputEdit,
+  handleChangeKeyDownEdit,
+  DeleteAllCompleted,
+}) {
+  return (
     <table>
       <thead>
-          <tr>
-              <th colspan="4">Pense bête pour les bètes</th>
-          </tr>
+        <tr>
+          <th colSpan="3">Pense bête pour les bètes</th>
+          <th colSpan="1">
+            {items.find((item) => item.isCompleted === true) && (
+              <button onClick={DeleteAllCompleted}>Delete OK</button>
+            )}{" "}
+          </th>
+        </tr>
       </thead>
       <tbody>
-          {toDoList}
+        {items.map((item) => (
+          <TodoItem
+            key={item.id}
+            handleChangeIsCompleted={handleChangeIsCompleted}
+            handleDeleteItem={handleDeleteItem}
+            handleChangeEdit={handleChangeEdit}
+            handleChangeInputEdit={handleChangeInputEdit}
+            handleChangeKeyDownEdit={handleChangeKeyDownEdit}
+            {...item}
+          />
+        ))}
       </tbody>
     </table>
   );

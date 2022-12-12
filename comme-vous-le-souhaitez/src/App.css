@@ -42,3 +42,7 @@ table {
     transform: rotate(360deg);
   }
 }
+
+.isCompleted{
+  text-decoration:line-through;
+}
